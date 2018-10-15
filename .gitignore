@@ -66,3 +66,5 @@ typings/
 
 .firebase/hosting.cHVibGlj.cache
 
+*.cache
+
