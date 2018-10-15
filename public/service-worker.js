@@ -5,20 +5,19 @@ self.addEventListener('install',event=>{
     event.waitUntil(
         caches.open(cacheName)
             .then(cache => cache.addAll([
-                '/lib/images/hello.png',
-                '/lib/js/script.js'
+                './lib/images/hello.png',
+                './lib/js/script.js'
             ]))
     );
 });
 
 self.addEventListener('fetch',event=>{
-    console.log('Event: ',event);
     event.respondWith(caches.match(event.request).then(function(response){
         if(response){
-            console.log('From Cache');
+            console.log('From Cache: ',event);
             return response;
         }
-        console.log('From Http');
+        console.log('From Http: ',event);
         return fetch(event.request);
     }));
 });
