@@ -12,12 +12,31 @@ self.addEventListener('install',event=>{
 });
 
 self.addEventListener('fetch',event=>{
-    event.respondWith(caches.match(event.request).then(function(response){
+    event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response){
         if(response){
-            console.log('From Cache: ',event);
+            console.log('From Cache: ',event.request.url);
             return response;
         }
-        console.log('From Http: ',event);
-        return fetch(event.request);
+
+
+        var requestToCache = event.request.clone();
+
+        console.log('From Http: ',requestToCache.url);
+        return fetch(requestToCache).then(function(response){
+            if(!response || response.status !== 200){
+                console.log('No 200 !!!!!!!!!!!!',response);
+                return response;
+            }
+
+            var responseToCache = response.clone();
+            caches.open(cacheName).then(function(cache){
+                console.log("Copy to Cache!!!!!!!!!!!!",responseToCache)
+                cache.put(requestToCache,responseToCache);
+            });
+
+            console.log('From Http2: ',event.request.url);
+            return response;
+        });
+
     }));
 });
