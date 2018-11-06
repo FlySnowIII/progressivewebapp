@@ -1,0 +1,40 @@
+{
+    "short_name": "PWA",
+    "name": "PWA Test by Tang",
+    "display": "standalone",
+    "theme_color": "#4285F4",
+    "background_color": "#4285F4",
+    "icons": [
+      {
+        "src": "/launcher-icon-1x.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "/launcher-icon-2x.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "/icon-128x128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/apple-touch-icon.png",
+        "type": "image/png",
+        "sizes": "120x120"
+      }, 
+      {
+        "src": "/ms-touch-icon-144x144-precomposed.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/launcher-icon-4x.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/index.html?launcher=true"
+  }
