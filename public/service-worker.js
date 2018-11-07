@@ -1,4 +1,4 @@
-var cacheName = 'helloWorld';
+var cacheName = 'PWA_TANG_TEST';
 
 self.addEventListener('install',event=>{
     console.log('Install: ',event);
@@ -6,7 +6,11 @@ self.addEventListener('install',event=>{
         caches.open(cacheName)
             .then(cache => cache.addAll([
                 './lib/images/hello.png',
-                './lib/js/script.js'
+                './lib/js/jquery.min.js',
+                './lib/js/bootstrap.min.js',
+                './lib/js/clipboard.min.js',
+                './lib/js/index.js',
+                './lib/css/bootstrap.min.js',
             ]))
     );
 });

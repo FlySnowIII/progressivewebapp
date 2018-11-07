@@ -6,35 +6,36 @@
     "background_color": "#4285F4",
     "icons": [
       {
-        "src": "/launcher-icon-1x.png",
+        "src": "/icon/launcher-icon-1x.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "/launcher-icon-2x.png",
+        "src": "/icon/launcher-icon-2x.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "/icon-128x128.png",
+        "src": "/icon/icon-128x128.png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "/apple-touch-icon.png",
+        "src": "/icon/apple-touch-icon.png",
         "type": "image/png",
         "sizes": "120x120"
       }, 
       {
-        "src": "/ms-touch-icon-144x144-precomposed.png",
+        "src": "/icon/ms-touch-icon-144x144-precomposed.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "/launcher-icon-4x.png",
+        "src": "/icon/launcher-icon-4x.png",
         "type": "image/png",
         "sizes": "192x192"
       }
     ],
-    "start_url": "/index.html?launcher=true"
+    "start_url": "/index.html?launcher=true",
+    "gcm_sender_id": "103953800507"
   }

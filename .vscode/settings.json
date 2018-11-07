@@ -1,0 +1,6 @@
+{
+    "powermode.comboThreshold": 10,
+    "powermode.shakeIntensity": 0,
+    "powermode.comboTimeout": 3,
+    "powermode.presets": "fireworks"
+}
