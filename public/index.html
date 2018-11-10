@@ -61,7 +61,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-bottom">
         <a class="navbar-brand">
             <img class="img-thumbnail" src="./lib/images/hello.png" width="30" height="30">
-            v 0.0.16
+            v 0.0.17
         </a>
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
@@ -74,6 +74,31 @@
             </ul>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="row small">
+            <div class="col-3">outerWidth</div>
+            <div class="col-3" id="outerWidth-div">Height</div>
+            <div class="col-3">innerWidth</div>
+            <div class="col-3" id="innerWidth-div">Height</div>
+        </div>
+        <div class="row small">
+            <div class="col-3">outerHeight</div>
+            <div class="col-3" id="outerHeight-div">Height</div>
+            <div class="col-3">innerHeight</div>
+            <div class="col-3" id="innerHeight-div">Height</div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function () {
+        $("#outerWidth-div").html(window.outerWidth);
+        $("#outerHeight-div").html(window.outerHeight);
+        $("#innerWidth-div").html(window.innerWidth);
+        $("#innerHeight-div").html(window.innerHeight);
+    });
+    </script>
+
+    <hr>
 
     <div class="p-3">
         <div class="container">
